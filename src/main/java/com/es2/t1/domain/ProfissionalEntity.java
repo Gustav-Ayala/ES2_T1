@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Builder
 @Entity
 @Table(name = "Profissional")
-public class Profissional {
+public class ProfissionalEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "profissional_id_seq")
     int id;
@@ -25,6 +25,6 @@ public class Profissional {
     String raça;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "especialidade_id")
-    Especialidade especialidade;
+    EspecialidadeEntity especialidade;
 
 }
