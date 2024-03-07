@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping(path = "/Especialidade")
+@RequestMapping(path = "/especialidade")
 public class EspecialidadeController {
     private final EspecialidadeService especialidadeService;
 
