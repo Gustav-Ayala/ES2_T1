@@ -29,6 +29,12 @@ public class ProfissionalController {
         return profissionalService.readProfissional();
     }
 
+    @PutMapping(path = "/{id}")
+    public ResponseEntity<Void> updateProfissional(@RequestBody ProfissionalEntity profissionalEntity, @PathVariable int id){
+        profissionalEntity.setId(id);
+        return profissionalService.updateProfissional(profissionalEntity);
+    }
+
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id){
         return profissionalService.deleteProfissional(id);

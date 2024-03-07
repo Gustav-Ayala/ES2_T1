@@ -57,4 +57,9 @@ public class ProfissionalService {
         profissionalRepositorie.deleteById(id);
         return ResponseEntity.ok().build();
     }
+
+    public ResponseEntity<Void> updateProfissional(ProfissionalEntity profissionalEntity){
+        profissionalRepositorie.save(profissionalEntity);
+        return ResponseEntity.ok().build();
+    }
 }
