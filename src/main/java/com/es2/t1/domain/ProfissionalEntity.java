@@ -23,7 +23,7 @@ public class ProfissionalEntity {
     String genero;
     LocalDate dataNasc;
     String raça;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "id_especialidade")
     EspecialidadeEntity especialidade;
 }
