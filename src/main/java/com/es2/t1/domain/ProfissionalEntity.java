@@ -24,6 +24,6 @@ public class ProfissionalEntity {
     LocalDate dataNasc;
     String raça;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "especialidade_id")
+    @JoinColumn(name = "id_especialidade")
     EspecialidadeEntity especialidade;
 }

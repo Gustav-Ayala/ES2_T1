@@ -18,6 +18,5 @@ public class ProfissionalDTO {
     String genero;
     LocalDate dataNasc;
     String raça;
-    EspecialidadeDTO especialidade;
-
+    Long idEspecialidade;
 }
