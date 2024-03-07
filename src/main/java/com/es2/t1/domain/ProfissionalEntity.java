@@ -26,5 +26,4 @@ public class ProfissionalEntity {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "especialidade_id")
     EspecialidadeEntity especialidade;
-
 }
