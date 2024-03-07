@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "Especialidade")
-public class Especialidade {
+public class EspecialidadeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "especialidade_id_seq")
     int id;
