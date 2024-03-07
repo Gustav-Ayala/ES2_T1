@@ -24,4 +24,9 @@ public class ProfissionalController {
         return profissionalService.readProfissional(id);
     }
 
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id){
+        return profissionalService.deleteProfissional(id);
+    }
+
 }

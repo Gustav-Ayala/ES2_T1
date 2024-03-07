@@ -7,6 +7,7 @@ import com.es2.t1.domain.repositories.EspecialidadeRepositorie;
 import com.es2.t1.domain.repositories.ProfissionalRepositorie;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 
@@ -44,5 +45,10 @@ public class ProfissionalService {
         if(profissionalEntity.isPresent())
             return ResponseEntity.ok(profissionalEntity);
         return ResponseEntity.notFound().build();
+    }
+
+    public ResponseEntity<Void> deleteProfissional(Long id){
+        profissionalRepositorie.deleteById(id);
+        return ResponseEntity.ok().build();
     }
 }
