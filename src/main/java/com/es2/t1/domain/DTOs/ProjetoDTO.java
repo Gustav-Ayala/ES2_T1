@@ -1,6 +1,7 @@
 package com.es2.t1.domain.DTOs;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +17,8 @@ public class ProjetoDTO {
     Long id;
     String nomeCliente;
     String objetivoProjeto;
+
+    @JsonFormat(pattern = "dd/MM/yyyy")
     LocalDate dataInicio;
     LocalDate dataFim;
     float valorProjeto;

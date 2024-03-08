@@ -19,7 +19,8 @@ public class TimeController {
         return timeServices.readTime(id);
     }
 
-    public ResponseEntity<TimeEntity> create(@RequestBody TimeEntity time) {
+    @PostMapping
+    public ResponseEntity<TimeEntity> createTime(@RequestBody TimeEntity time) {
         return timeServices.createTime(time);
     }
 
