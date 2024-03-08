@@ -1,17 +1,15 @@
 package com.es2.t1.services;
 
 import com.es2.t1.domain.DTOs.ProfissionalDTO;
-import com.es2.t1.domain.EspecialidadeEntity;
-import com.es2.t1.domain.ProfissionalEntity;
+import com.es2.t1.domain.entities.EspecialidadeEntity;
+import com.es2.t1.domain.entities.ProfissionalEntity;
 import com.es2.t1.domain.repositories.EspecialidadeRepositorie;
 import com.es2.t1.domain.repositories.ProfissionalRepositorie;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +22,6 @@ public class ProfissionalService {
     public ResponseEntity<ProfissionalEntity> createProfissional(ProfissionalDTO profissional){
 
         ProfissionalEntity profissionalEntity = new ProfissionalEntity();
-        profissionalEntity.setId(profissional.getId());
         profissionalEntity.setNome(profissional.getNome());
         profissionalEntity.setGenero(profissional.getGenero());
         profissionalEntity.setRaça(profissional.getRaça());

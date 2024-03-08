@@ -5,18 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProfissionalDTO {
-    Long id;
-    String nome;
-    String endereço;
-    String genero;
-    LocalDate dataNasc;
-    String raça;
-    Long idEspecialidade;
+public class TimeDTO {
+    int id;
+    String nomeTime;
+    List<ProfissionalDTO> profissionais;
 }

@@ -1,4 +1,4 @@
-package com.es2.t1.domain;
+package com.es2.t1.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -17,7 +18,7 @@ import java.time.LocalDate;
 public class ProfissionalEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "profissional_id_seq")
-    int id;
+    Long id;
     String nome;
     String endereço;
     String genero;
@@ -26,4 +27,5 @@ public class ProfissionalEntity {
     @ManyToOne
     @JoinColumn(name = "id_especialidade")
     EspecialidadeEntity especialidade;
+
 }
