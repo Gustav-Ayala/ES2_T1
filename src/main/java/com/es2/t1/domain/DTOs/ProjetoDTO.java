@@ -15,6 +15,7 @@ import java.time.LocalDate;
 @Builder
 public class ProjetoDTO {
     Long id;
+    String nomeProjeto;
     String nomeCliente;
     String objetivoProjeto;
 
@@ -24,5 +25,5 @@ public class ProjetoDTO {
     @JsonFormat(pattern = "dd/MM/yyyy")
     LocalDate dataFim;
     float valorProjeto;
-    int idTime;
+    Long idTime;
 }

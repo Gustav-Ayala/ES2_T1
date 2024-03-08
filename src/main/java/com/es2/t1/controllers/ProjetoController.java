@@ -1,7 +1,10 @@
 package com.es2.t1.controllers;
 
+import com.es2.t1.domain.DTOs.ProjetoDTO;
 import com.es2.t1.domain.entities.ProjetoEntity;
+import com.es2.t1.domain.entities.TimeEntity;
 import com.es2.t1.domain.repositories.ProjetoRepositorie;
+import com.es2.t1.domain.repositories.TimeRepositorie;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,9 +19,20 @@ public class ProjetoController {
 
     ProjetoRepositorie projetoRepositorie;
 
+    TimeRepositorie timeRepositorie;
+
     @PostMapping
-    public ResponseEntity<ProjetoEntity> create(@RequestBody ProjetoEntity projeto) {
-        ProjetoEntity createdProjeto = projetoRepositorie.save(projeto);
+    public ResponseEntity<ProjetoEntity> create(@RequestBody ProjetoDTO projeto) {
+        ProjetoEntity createdProjeto = new ProjetoEntity();
+        createdProjeto.setNomeProjeto(projeto.getNomeProjeto());
+        createdProjeto.setObjetivoProjeto(projeto.getObjetivoProjeto());
+        createdProjeto.setValorProjeto(projeto.getValorProjeto());
+        createdProjeto.setDataFim(projeto.getDataFim());
+        createdProjeto.setDataInicio(projeto.getDataInicio());
+        Optional<TimeEntity> timeResponsavel = timeRepositorie.findById(projeto.getIdTime());
+        createdProjeto.setTimeResponsavel(timeResponsavel.get());
+        createdProjeto.setNomeCliente(projeto.getNomeCliente());
+        projetoRepositorie.save(createdProjeto);
         return ResponseEntity.ok(createdProjeto);
     }
 

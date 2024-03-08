@@ -19,6 +19,8 @@ public class    ProjetoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
+    String nomeProjeto;
     String nomeCliente;
     String objetivoProjeto;
 
