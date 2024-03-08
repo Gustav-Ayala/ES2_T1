@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -21,7 +22,7 @@ public class TimeEntity {
     Long id;
 
     String nomeTime;
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.REMOVE)
     @JoinTable(
             name = "profissionalTime",
             joinColumns = @JoinColumn(name = "time_id"),

@@ -2,12 +2,16 @@ package com.es2.t1.controllers;
 
 import com.es2.t1.domain.entities.ProjetoEntity;
 import com.es2.t1.domain.repositories.ProjetoRepositorie;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
+@RestController
+@RequestMapping(path = "/projeto")
+@AllArgsConstructor
 public class ProjetoController {
 
     ProjetoRepositorie projetoRepositorie;
