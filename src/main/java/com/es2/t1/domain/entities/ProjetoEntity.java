@@ -1,6 +1,7 @@
 package com.es2.t1.domain.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,11 +17,15 @@ import java.time.LocalDate;
 @Table(name = "Projeto")
 public class    ProjetoEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "profissional_id_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String nomeCliente;
     String objetivoProjeto;
+
+    @JsonFormat(pattern = "dd/MM/yyyy")
     LocalDate dataInicio;
+
+    @JsonFormat(pattern = "dd/MM/yyyy")
     LocalDate dataFim;
     float valorProjeto;
 

@@ -21,5 +21,5 @@ public class ProfissionalDTO {
     @JsonFormat(pattern = "dd/MM/yyyy")
     LocalDate dataNasc;
     String raça;
-    Long idEspecialidade;
+    Long especialidade;
 }

@@ -22,12 +22,13 @@ public class ProfissionalService {
     public ResponseEntity<ProfissionalEntity> createProfissional(ProfissionalDTO profissional){
 
         ProfissionalEntity profissionalEntity = new ProfissionalEntity();
+
         profissionalEntity.setNome(profissional.getNome());
         profissionalEntity.setGenero(profissional.getGenero());
         profissionalEntity.setRaça(profissional.getRaça());
         profissionalEntity.setEndereço(profissional.getEndereço());
 
-        Optional<EspecialidadeEntity> optEspecialidade = especialidadeRepositorie.findById(profissional.getIdEspecialidade());
+        Optional<EspecialidadeEntity> optEspecialidade = especialidadeRepositorie.findById(profissional.getEspecialidade());
         profissionalEntity.setDataNasc(profissional.getDataNasc());
 
         if(optEspecialidade.isPresent()){

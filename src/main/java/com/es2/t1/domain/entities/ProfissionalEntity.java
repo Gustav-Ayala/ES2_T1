@@ -1,5 +1,6 @@
 package com.es2.t1.domain.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,11 +18,13 @@ import java.util.List;
 @Table(name = "Profissional")
 public class ProfissionalEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "profissional_id_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String nome;
     String endereço;
     String genero;
+
+    @JsonFormat(pattern = "dd/MM/yyyy")
     LocalDate dataNasc;
     String raça;
     @ManyToOne

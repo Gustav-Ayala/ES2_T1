@@ -18,7 +18,7 @@ import java.util.List;
 @Table(name = "Time")
 public class TimeEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "profissional_id_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     String nomeTime;

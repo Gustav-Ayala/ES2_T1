@@ -11,7 +11,7 @@ import lombok.*;
 @Table(name = "Especialidade")
 public class EspecialidadeEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "especialidade_id_seq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String descricao;
 }
