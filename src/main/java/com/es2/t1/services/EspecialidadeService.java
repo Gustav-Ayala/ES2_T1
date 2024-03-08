@@ -1,8 +1,7 @@
 package com.es2.t1.services;
 
 
-import com.es2.t1.domain.EspecialidadeEntity;
-import com.es2.t1.domain.ProfissionalEntity;
+import com.es2.t1.domain.entities.EspecialidadeEntity;
 import com.es2.t1.domain.repositories.EspecialidadeRepositorie;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,7 @@
 package com.es2.t1.controllers;
 
 import com.es2.t1.domain.DTOs.ProfissionalDTO;
-import com.es2.t1.domain.ProfissionalEntity;
+import com.es2.t1.domain.entities.ProfissionalEntity;
 import com.es2.t1.services.ProfissionalService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +30,7 @@ public class ProfissionalController {
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<Void> updateProfissional(@RequestBody ProfissionalEntity profissionalEntity, @PathVariable int id){
+    public ResponseEntity<Void> updateProfissional(@RequestBody ProfissionalEntity profissionalEntity, @PathVariable Long id){
         profissionalEntity.setId(id);
         return profissionalService.updateProfissional(profissionalEntity);
     }

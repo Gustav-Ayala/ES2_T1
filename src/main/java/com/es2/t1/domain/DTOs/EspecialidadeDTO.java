@@ -7,6 +7,6 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class EspecialidadeDTO {
-    int id;
+    Long id;
     String descricao;
 }
