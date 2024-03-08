@@ -14,5 +14,5 @@ import java.util.List;
 public class TimeDTO {
     int id;
     String nomeTime;
-    List<Long> idProfissionais;
+    List<ProfissionalDTO> profissionais;
 }

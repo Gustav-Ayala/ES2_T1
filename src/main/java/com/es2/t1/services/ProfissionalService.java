@@ -22,7 +22,6 @@ public class ProfissionalService {
     public ResponseEntity<ProfissionalEntity> createProfissional(ProfissionalDTO profissional){
 
         ProfissionalEntity profissionalEntity = new ProfissionalEntity();
-        profissionalEntity.setId(profissional.getId());
         profissionalEntity.setNome(profissional.getNome());
         profissionalEntity.setGenero(profissional.getGenero());
         profissionalEntity.setRaça(profissional.getRaça());
