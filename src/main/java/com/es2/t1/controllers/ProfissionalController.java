@@ -13,6 +13,7 @@ import java.time.format.DateTimeFormatter;
 @RestController
 @AllArgsConstructor
 @RequestMapping(path = "/profissional")
+@CrossOrigin
 public class ProfissionalController {
 
     private final ProfissionalService profissionalService;

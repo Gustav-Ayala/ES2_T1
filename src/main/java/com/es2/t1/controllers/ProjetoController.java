@@ -15,6 +15,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping(path = "/projeto")
 @AllArgsConstructor
+@CrossOrigin
 public class ProjetoController {
 
     ProjetoRepositorie projetoRepositorie;

@@ -12,12 +12,22 @@ services:
       - db-vol:/var/lib/postgresql/data
     networks:
       - infra
-  back:
-    image: es2/back
+  backend:
+    image: back
     depends_on:
       - database
     ports:
       - "8080:8080"
+    networks:
+      - infra
+  frontend:
+    image: front
+    depends_on:
+      - backend
+    environment:
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
     networks:
       - infra
 volumes:

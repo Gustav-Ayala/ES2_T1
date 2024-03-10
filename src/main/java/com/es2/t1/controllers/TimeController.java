@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping(path = "/time")
+@CrossOrigin
 public class TimeController {
     private final TimeServices timeServices;
 
